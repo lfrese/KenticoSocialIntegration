@@ -674,7 +674,7 @@ public class TwitterManager
             {
                 MarkupBuilder mb = new MarkupBuilder();
                 string tw_str = mb.GetMarkup("Twitter");
-                string s = string.Format(tw_str, "https://twitter.com/ACPNY/status/"+t["id"], t["text"], t["created_at"]);
+                string s = string.Format(tw_str, "https://twitter.com/"+uname+"/status/"+t["id"], t["text"], t["created_at"]);
                 tw_list.Add(s);
             }
             catch
