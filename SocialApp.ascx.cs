@@ -576,7 +576,7 @@ public class MarkupBuilder
                 html = "<div class='community_box tw_box'>";
                 html += "<div class='tw_text'>";
                 html += "<div class='icon'> </div>";
-                html += "<a href='https://twitter.com/ACPNY/status/{0}' target='_blank'>{1}</a>";
+                html += "<a href='{0}' target='_blank'>{1}</a>";
                 html += "</div>";
                 html += "<!--<div class='tw_time'>{2}</div>-->";
                 html += "</div>";
@@ -674,7 +674,7 @@ public class TwitterManager
             {
                 MarkupBuilder mb = new MarkupBuilder();
                 string tw_str = mb.GetMarkup("Twitter");
-                string s = string.Format(tw_str, t["id"], t["text"], t["created_at"]);
+                string s = string.Format(tw_str, "https://twitter.com/ACPNY/status/"+t["id"], t["text"], t["created_at"]);
                 tw_list.Add(s);
             }
             catch
